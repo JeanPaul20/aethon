@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="media/aethon-icon.png" alt="Aethon" width="128" height="128" />
 </p>
 
@@ -6,7 +6,7 @@
 
 <p align="center">
   <em>AI-powered coding orchestrator for VS Code.</em><br/>
-  <a href="https://github.com/JeanPaul20/aethon-mission-control">GitHub</a> · <a href="https://github.com/JeanPaul20/aethon-mission-control/issues">Issues</a> · <a href="AETHON_ARCHITECTURE.md">Architecture</a> · <a href="TRAINING_PIPELINE.md">Training Pipeline</a> · <a href="LICENSE">MIT License</a>
+  <a href="https://github.com/JeanPaul20/aethon">GitHub</a> · <a href="https://github.com/JeanPaul20/aethon/issues">Issues</a> · <a href="https://github.com/JeanPaul20/aethon-mission-control/blob/main/LICENSE">MIT License</a>
 </p>
 
 ---
@@ -22,6 +22,7 @@ Aethon is a **VS Code extension** that implements multi-agent orchestration for 
 ## When to Use Aethon
 
 Use Aethon when you need to:
+
 - **Compare multiple AI models** for the same coding task (e.g., GPT-4 vs Claude vs local Llama3)
 - **Refine vague requirements** into structured, actionable prompts through iterative AI dialogue
 - **Evaluate competing implementations** with automated scoring for security, style, and correctness
@@ -93,7 +94,7 @@ See [Privacy & Security](#privacy--security) for detailed data handling policies
 ## Installation
 
 1. Install from VS Code Extensions marketplace (search "Aethon Mission Control")
-2. Or download `.vsix` from [GitHub Releases](https://github.com/JeanPaul20/aethon-mission-control/releases)
+2. Or download `.vsix` from [GitHub Releases](https://github.com/JeanPaul20/aethon/releases)
 3. Open Copilot Chat (Ctrl+Shift+I or Cmd+Shift+I)
 4. Type `@aethon` to invoke the orchestrator
 
@@ -120,7 +121,6 @@ See [Privacy & Security](#privacy--security) for detailed data handling policies
 
 ```
 
-
 ## Usage Commands
 
 All commands are invoked via the `@aethon` chat participant in Copilot Chat:
@@ -144,14 +144,12 @@ All commands are invoked via the `@aethon` chat participant in Copilot Chat:
 - **`/tasks`** — List all saved task files in `.aethon/`
 - **`/explain`** — Explain the current editor selection
 
-
 ### Aethon Studio
 
 Open via **Aethon: Open Model Catalog** or **Aethon: Open Playground** in the command palette.
 
 - **Model Catalog** — Live cards for every available AI model across all configured providers. Filter by category (Local / Private / Cloud), search by name, open any model directly in the Playground.
 - **Playground** — Multi-turn streaming chat with any catalog model. Supports VS Code LM (GitHub Copilot, AI Toolkit), Ollama, Infomaniak, OpenAI-compatible providers.
-
 
 ### MCP Server
 
@@ -160,7 +158,6 @@ To expose Aethon tools to external LM clients (Claude Desktop, etc.):
 1. Run **Aethon: Start MCP Server (stdio)** from the command palette
 2. Configure the external client to use stdio transport
 3. Available tools: `aethon_readFile`, `aethon_editFile`, `aethon_listFiles`, `aethon_runTerminal`, `aethon_getDiagnostics`, `aethon_searchWorkspace`
-
 
 ## Privacy & Security
 
@@ -207,23 +204,25 @@ Findings are appended to proposal files with severity ratings (Critical/High/Med
 - **Consent flow:** Euria (Infomaniak) integration requires explicit opt-in per session
 - **Audit trail:** All AI provider calls are logged with timestamp, provider, and anonymization status in `/status` dashboard
 
-
 ## What's New
 
 > **Current version: v1.2.0** — see [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 ### v1.2.0 — 2026-03-05
+
 - **Multi-language fix rules** — zero-token static fixes + official rule catalog for Markdown, TypeScript, JavaScript, JSON, PHP, Python, YAML. Official descriptions injected into LM prompts for any supported linter.
 - **/fix command** — inline diagnostic fixer: static rules first (no LM), streaming Copilot fallback.
 - **scripts/add-fix-language.js** — scaffolds a new language into the fix rules system in one command.
 
 ### v1.1.0 — 2026-03-04
+
 - **Aethon Studio Panel** — visual Model Catalog (live cards for VS Code LM / Ollama / Infomaniak / cloud) + streaming Playground.
 - **Setup Wizard** — auto-discovers local LM servers (Ollama, LM Studio, Jan.ai, GPT4All) + cloud key onboarding.
 - **/ask command** — RAG semantic search over workspace notes or Brainstorm Digest JSON.
 - **CredentialStore** — encrypted key storage via VS Code SecretStorage; injected into process.env at bootstrap.
 
 ### v1.0.0 — 2026-03-01
+
 - Initial production release: full command set, multi-model orchestration, evaluation, orchestrator agent, training data export, security scanner, MCP server, auto-update.
 
 ## Usage
@@ -281,5 +280,5 @@ Findings are appended to proposal files with severity ratings (Critical/High/Med
 | `aethon.autoUpdate.checkIntervalHours` | `6` | Hours between update checks (1–168) |
 | `aethon.autoUpdate.includePrerelease` | `false` | Include pre-release versions |
 
-
 **Keywords:** AI coding orchestrator, multi-model AI comparison, VS Code extension, prompt engineering, DPO training data, local LLM, GitHub Copilot alternative, AI agent orchestration, Model Context Protocol, Swiss AI hosting, privacy-first coding assistant
+
