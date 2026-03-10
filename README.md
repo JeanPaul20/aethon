@@ -6,7 +6,7 @@
 
 <p align="center">
   <em>AI-powered coding orchestrator for VS Code.</em><br/>
-  <a href="https://github.com/JeanPaul20/aethon">GitHub</a> · <a href="https://github.com/JeanPaul20/aethon/issues">Issues</a> · <a href="https://github.com/JeanPaul20/aethon-mission-control/blob/main/LICENSE">MIT License</a>
+  <a href="https://github.com/JeanPaul20/aethon">GitHub</a> · <a href="https://github.com/JeanPaul20/aethon/issues">Issues</a> · <a href="AETHON_ARCHITECTURE.md">Architecture</a> · <a href="TRAINING_PIPELINE.md">Training Pipeline</a> · <a href="https://github.com/JeanPaul20/aethon-mission-control/blob/main/LICENSE">MIT License</a>
 </p>
 
 ---
