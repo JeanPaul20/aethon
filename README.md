@@ -206,13 +206,37 @@ Findings are appended to proposal files with severity ratings (Critical/High/Med
 
 ## What's New
 
-> **Current version: v1.2.0** — see [CHANGELOG.md](CHANGELOG.md) for the full history.
+> **Current version: v1.3.4** — see [CHANGELOG.md](CHANGELOG.md) for the full history.
 
-### v1.2.0 — 2026-03-05
+### v1.3.4 — 2026-03-09
 
-- **Multi-language fix rules** — zero-token static fixes + official rule catalog for Markdown, TypeScript, JavaScript, JSON, PHP, Python, YAML. Official descriptions injected into LM prompts for any supported linter.
-- **/fix command** — inline diagnostic fixer: static rules first (no LM), streaming Copilot fallback.
-- **scripts/add-fix-language.js** — scaffolds a new language into the fix rules system in one command.
+- **Training Data tab in Aethon Studio** — stats grid, storage paths, command breakdown table, recent entries, export buttons (Alpaca / ShareGPT / DPO), and "Open folder" button, all in one panel.
+- **Settings tab completeness** — every extension setting now accessible from Aethon Studio: anonymization patterns, Euria AI toggles, named provider models, proposal model configuration.
+- **"Run Backend" button** in Dashboard Quick Actions — launches the local backend in a named VS Code terminal.
+
+<details>
+<summary>Older versions</summary>
+
+### v1.3.3 — 2026-03-09
+
+- Restored Dashboard, Settings, and Agent Debug sidebar views that were silently removed in v1.3.1.
+- Dashboard startup hang eliminated — switched to `getQuickStats()` (line-count only) for instant load.
+
+### v1.3.2 — 2026-03-09
+
+- Update check failure now shows specific reason + "Open Output" button.
+- Removed redundant `@vscode/vsce` devDependency; regenerated `package-lock.json`.
+
+### v1.3.1 — 2026-03-09
+
+- Removed the static fix-rules catalog (Markdown, TS, JS, Python, PHP, JSON, YAML) — it was not sourced from official package data and produced inaccurate LM prompts.
+- `/fix` command now falls back directly to streaming Copilot with no static rule step.
+- LM fix progress notification now shows incremental progress with a 30-second auto-cancel timeout.
+
+### v1.3.0 — 2026-03-05
+
+- Fixed auto-update service not running on extension activation.
+- Fixed auto-update timer leak on deactivation.
 
 ### v1.1.0 — 2026-03-04
 
@@ -224,6 +248,8 @@ Findings are appended to proposal files with severity ratings (Critical/High/Med
 ### v1.0.0 — 2026-03-01
 
 - Initial production release: full command set, multi-model orchestration, evaluation, orchestrator agent, training data export, security scanner, MCP server, auto-update.
+
+</details>
 
 ## Usage
 
@@ -281,4 +307,3 @@ Findings are appended to proposal files with severity ratings (Critical/High/Med
 | `aethon.autoUpdate.includePrerelease` | `false` | Include pre-release versions |
 
 **Keywords:** AI coding orchestrator, multi-model AI comparison, VS Code extension, prompt engineering, DPO training data, local LLM, GitHub Copilot alternative, AI agent orchestration, Model Context Protocol, Swiss AI hosting, privacy-first coding assistant
-
